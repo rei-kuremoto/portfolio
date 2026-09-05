@@ -30,6 +30,8 @@ import v2TshirtWhite from '../assets/images/detail/version2/05-tshirt-white.png'
 import v2ShirtsFolded from '../assets/images/detail/version2/06-shirts-folded.png'
 
 import serviceSiteCollage from '../assets/images/detail/service-site/01-collage.png'
+import serviceSiteVideo1 from '../assets/images/detail/service-site/02-details.mp4'
+import serviceSiteVideo2 from '../assets/images/detail/service-site/03-details.mp4'
 
 import adBannersCollage from '../assets/images/detail/ad-banners/01-collage.png'
 
@@ -45,6 +47,9 @@ import onboardingStickersFanned from '../assets/images/detail/onboarding/06-stic
 
 import productDesignPage1 from '../assets/images/detail/product-design/01.png'
 import productDesignPage2 from '../assets/images/detail/product-design/02.png'
+import productDesignPage3 from '../assets/images/detail/product-design/03.png'
+import productDesignPage4 from '../assets/images/detail/product-design/04.png'
+import productDesignPage5 from '../assets/images/detail/product-design/05.png'
 
 import hakkoPage1 from '../assets/images/detail/hakko/01.png'
 import hakkoPage2 from '../assets/images/detail/hakko/02.png'
@@ -127,7 +132,7 @@ const slides = [
     },
   },
   {
-    caption: 'product site / 2025-2026',
+    caption: 'service site / 2025-2026',
     categories: ['uiux', 'graphic', 'digital'],
     outerClass: 'w-full md:w-[462px]',
     image: (
@@ -137,7 +142,7 @@ const slides = [
         className="h-auto w-full"
       />
     ),
-    detail: {
+      detail: {
       title: 'サービスサイト',
       description: [
         '会社のプロダクトを紹介するサイトのデザインやLP、キャンペーンやプロモーションページの作成。',
@@ -145,9 +150,8 @@ const slides = [
       ],
       tags: ['website design', 'graphic design'],
       date: '2025 ~ 2026',
-      layout: 'grid',
-      rowSizes: [1],
-      images: [serviceSiteCollage],
+      layout: 'pager',
+      images: [serviceSiteCollage, serviceSiteVideo1, serviceSiteVideo2],
     },
   },
   {
@@ -300,7 +304,7 @@ const slides = [
       tags: ['UX research', 'UI/UX design'],
       date: '2023 ~ 2025',
       layout: 'pager',
-      images: [productDesignPage1, productDesignPage2],
+      images: [productDesignPage1, productDesignPage2, productDesignPage3, productDesignPage4, productDesignPage5],
     },
   },
   {

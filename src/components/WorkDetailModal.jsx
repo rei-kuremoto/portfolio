@@ -1,5 +1,27 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
+// Detect Tailwind breakpoints by toggling a hidden element with the
+// breakpoint prefix and reading its computed display. Returns true when
+// the viewport is below the named breakpoint (e.g. 'md'). This avoids
+// hardcoding pixel values and follows Tailwind's responsive tokens.
+function isBelowBreakpoint(bp) {
+  if (typeof window === 'undefined' || !document.body) return false
+  const id = `__bp_${bp}`
+  let el = document.getElementById(id)
+  if (!el) {
+    el = document.createElement('div')
+    el.id = id
+    // hidden by default, becomes block at the breakpoint and above
+    el.className = `${bp}:block hidden`
+    el.style.position = 'absolute'
+    el.style.left = '-9999px'
+    el.style.width = '1px'
+    el.style.height = '1px'
+    document.body.appendChild(el)
+  }
+  return getComputedStyle(el).display === 'none'
+}
+
 function CloseIcon() {
   return (
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
@@ -37,27 +59,74 @@ function ChevronIcon({ flip }) {
 function MobileImageStrip({ images }) {
   const trackRef = useRef(null)
   const [index, setIndex] = useState(0)
+  const refHeight = useRef(null)
 
   const scrollToIndex = (i) => {
     const track = trackRef.current
     const item = track?.children[i]
     if (!item) return
     track.scrollTo({ left: item.offsetLeft, behavior: 'smooth' })
+    // proactively set the index so the intended item starts playing
+    setIndex(i)
   }
 
   const handleScroll = () => {
     const track = trackRef.current
     if (!track) return
+    // Determine which child is visually centered in the scroll viewport.
+    // Use centers (offsetLeft + half width) and compare to track's scroll center.
+    const scrollCenter = track.scrollLeft + track.clientWidth / 2
     let closest = 0
     let minDiff = Infinity
     Array.from(track.children).forEach((child, i) => {
-      const diff = Math.abs(child.offsetLeft - track.scrollLeft)
+      const childCenter = child.offsetLeft + child.clientWidth / 2
+      const diff = Math.abs(childCenter - scrollCenter)
       if (diff < minDiff) {
         minDiff = diff
         closest = i
       }
     })
     setIndex(closest)
+  }
+
+  // Ensure only the currently-selected video's element plays; pause others.
+  useEffect(() => {
+    const track = trackRef.current
+    if (!track) return
+    const videos = Array.from(track.querySelectorAll('video'))
+    videos.forEach((v) => {
+      try {
+        const pageAttr = v.getAttribute('data-page')
+        const pageNum = pageAttr == null ? null : Number(pageAttr)
+        if (pageNum === index) {
+          v.muted = true
+          v.controls = false
+          const p = v.play()
+          if (p && typeof p.catch === 'function') p.catch(() => {})
+        } else {
+          v.pause()
+          try { v.currentTime = 0 } catch (e) {}
+        }
+      } catch (e) {}
+    })
+  }, [index])
+
+  // Store active video's clientHeight so the first image can match it.
+  const handleVideoMetadata = (e) => {
+    try {
+      refHeight.current = e.currentTarget.clientHeight
+      // apply immediately to any already-rendered first image
+      try {
+        const track = trackRef.current
+        if (track) {
+          const firstImg = track.querySelector('img')
+          if (firstImg && refHeight.current) {
+            firstImg.style.maxHeight = `${refHeight.current}px`
+            firstImg.style.width = 'auto'
+          }
+        }
+      } catch (err) {}
+    } catch (err) {}
   }
 
   if (images.length === 1) {
@@ -99,12 +168,25 @@ function MobileImageStrip({ images }) {
         onScroll={handleScroll}
         className="-mx-6 flex snap-x snap-mandatory items-start gap-3 overflow-x-auto scroll-pl-6 px-6 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
-        {images.map((src) => (
+        {images.map((src, i) => (
           <div
             key={src}
             className="w-[calc((100vw-3rem)/1.2)] flex-none snap-start border border-[#1f1c1c]"
           >
-            <img src={src} alt="" className="h-auto w-full object-contain" />
+            {typeof src === 'string' && src.toLowerCase().endsWith('.mp4') ? (
+              <video data-page={i} src={src} muted playsInline loop onLoadedMetadata={handleVideoMetadata} className="h-auto w-full object-contain" />
+            ) : (
+              <img
+                src={src}
+                alt=""
+                className="h-auto w-full object-contain"
+                style={
+                  i === 0 && refHeight.current && isBelowBreakpoint('md')
+                    ? { maxHeight: `${refHeight.current}px`, width: 'auto' }
+                    : undefined
+                }
+              />
+            )}
           </div>
         ))}
       </div>
@@ -136,7 +218,11 @@ function GridImages({ images, rowSizes }) {
           <div key={rowIndex} className={`grid gap-4 ${GRID_COLS[count]}`}>
             {rowImages.map((src) => (
               <div key={src} className={frameClassFor(count)}>
-                <img src={src} alt="" className={imageClassFor(count)} />
+                {typeof src === 'string' && src.toLowerCase().endsWith('.mp4') ? (
+                  <video src={src} controls playsInline className={imageClassFor(count)} />
+                ) : (
+                  <img src={src} alt="" className={imageClassFor(count)} />
+                )}
               </div>
             ))}
           </div>
@@ -148,6 +234,8 @@ function GridImages({ images, rowSizes }) {
 
 function PagerImages({ images }) {
   const [page, setPage] = useState(0)
+  const videoRef = useRef(null)
+  const refHeight = useRef(null)
 
   // Warm the browser cache for the neighboring slides so clicking next/prev
   // feels instant instead of showing a flash of loading — relevant once a
@@ -160,14 +248,50 @@ function PagerImages({ images }) {
     })
   }, [page, images])
 
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v) return
+    try {
+      v.muted = true
+      v.controls = false
+      const playPromise = v.play()
+      if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {})
+    } catch (e) {}
+    return () => {
+      try {
+        v.pause()
+        v.currentTime = 0
+      } catch (e) {}
+    }
+  }, [page, images])
+
+  // When an active video finishes loading metadata, store its rendered
+  // height so images (like the first collage) can match that height.
+  const handleVideoMetadata = (e) => {
+    try {
+      const v = e.currentTarget
+      // store the rendered clientHeight for later use
+      refHeight.current = v.clientHeight
+    } catch (err) {}
+  }
+
   return (
     <div className="flex flex-col gap-4">
-      <div className="w-full border border-[#1f1c1c]">
-        <img
-          src={images[page]}
-          alt=""
-          className="h-auto w-full object-contain"
-        />
+        <div className="w-full border border-[#1f1c1c]">
+        {typeof images[page] === 'string' && images[page].toLowerCase().endsWith('.mp4') ? (
+          <video ref={videoRef} data-page={page} src={images[page]} autoPlay muted playsInline onLoadedMetadata={handleVideoMetadata} className="h-auto w-full object-contain" />
+        ) : (
+          <img
+            src={images[page]}
+            alt=""
+            className="h-auto w-full object-contain"
+            style={
+              refHeight.current && isBelowBreakpoint('md')
+                ? { maxHeight: `${refHeight.current}px`, width: 'auto' }
+                : undefined
+            }
+          />
+        )}
       </div>
       {images.length > 1 && (
         <div className="flex items-center gap-4 text-sm font-medium">

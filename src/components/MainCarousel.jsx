@@ -73,6 +73,29 @@ const TAGS = [
 
 const slides = [
   {
+    caption: 'service site / 2025-2026',
+    categories: ['uiux', 'graphic', 'digital'],
+    outerClass: 'w-full md:w-[462px]',
+    image: (
+      <img
+        src={productSite}
+        alt="STORES product site shown on a MacBook"
+        className="h-auto w-full"
+      />
+    ),
+    detail: {
+      title: 'サービスサイト',
+      description: [
+        '会社のプロダクトを紹介するサイトのデザインやLP、キャンペーンやプロモーションページの作成。',
+        'CVR改善のために、情報設計や説明ビジュアルを見直しながらプロダクトのことがわかりやすく伝わるサイトの構築を試みた。マーケティングや事業推進の担当者と連携し、見る人の興味や共感を得られる表現を考えながらデザインを提案した。',
+      ],
+      tags: ['website design', 'graphic design'],
+      date: '2025 ~ 2026',
+      layout: 'pager',
+      images: [serviceSiteCollage, serviceSiteVideo1, serviceSiteVideo2],
+    },
+  },
+  {
     caption: 'VERSION #3 / 2026.05',
     categories: ['graphic', 'digital', 'print', 'other'],
     outerClass: 'w-full md:w-[462px]',
@@ -132,29 +155,6 @@ const slides = [
     },
   },
   {
-    caption: 'service site / 2025-2026',
-    categories: ['uiux', 'graphic', 'digital'],
-    outerClass: 'w-full md:w-[462px]',
-    image: (
-      <img
-        src={productSite}
-        alt="STORES product site shown on a MacBook"
-        className="h-auto w-full"
-      />
-    ),
-      detail: {
-      title: 'サービスサイト',
-      description: [
-        '会社のプロダクトを紹介するサイトのデザインやLP、キャンペーンやプロモーションページの作成。',
-        'CVR改善のために、情報設計や説明ビジュアルを見直しながらプロダクトのことがわかりやすく伝わるサイトの構築を試みた。マーケティングや事業推進の担当者と連携し、見る人の興味や共感を得られる表現を考えながらデザインを提案した。',
-      ],
-      tags: ['website design', 'graphic design'],
-      date: '2025 ~ 2026',
-      layout: 'pager',
-      images: [serviceSiteCollage, serviceSiteVideo1, serviceSiteVideo2],
-    },
-  },
-  {
     caption: 'diversity report 2025 / 2026.03',
     categories: ['graphic', 'editorial'],
     outerClass: 'w-full md:w-[462px]',
@@ -182,6 +182,35 @@ const slides = [
       date: '2026.03',
       layout: 'pager',
       images: diversityReportPages,
+    },
+  },
+  {
+    caption: 'product design / 2023-2025',
+    categories: ['uiux', 'digital', 'other'],
+    outerClass: 'w-full md:w-[462px]',
+    image: (
+      <img
+        src={productDesignIpad}
+        alt="STORES analytics app on iPad, sales breakdown and customer demographics"
+        className="h-auto w-full"
+      />
+    ),
+    detail: {
+      title: (
+        <>
+          product design at
+          <br />
+          STORES
+        </>
+      ),
+      description: [
+        'データ分析プロダクトのUI/UXを担当。プロダクトの機能改善や新機能のデザインにも携わった。',
+        'ユーザーのフィードバックを参考にしたり、時にはユーザーインタビューを通じてニーズを細かく分析したりしながら、プロダクトの改善に取り組んだ。「使いやすいプロダクト」を常に意識し、最善のUIを模索した。',
+      ],
+      tags: ['UX research', 'UI/UX design'],
+      date: '2023 ~ 2025',
+      layout: 'pager',
+      images: [productDesignPage1, productDesignPage2, productDesignPage3, productDesignPage4, productDesignPage5],
     },
   },
   {
@@ -276,35 +305,6 @@ const slides = [
       layout: 'grid',
       rowSizes: [1],
       images: [adBannersCollage],
-    },
-  },
-  {
-    caption: 'product design / 2023-2025',
-    categories: ['uiux', 'digital', 'other'],
-    outerClass: 'w-full md:w-[462px]',
-    image: (
-      <img
-        src={productDesignIpad}
-        alt="STORES analytics app on iPad, sales breakdown and customer demographics"
-        className="h-auto w-full"
-      />
-    ),
-    detail: {
-      title: (
-        <>
-          product design at
-          <br />
-          STORES
-        </>
-      ),
-      description: [
-        'データ分析プロダクトのUI/UXを担当。プロダクトの機能改善や新機能のデザインにも携わった。',
-        'ユーザーのフィードバックを参考にしたり、時にはユーザーインタビューを通じてニーズを細かく分析したりしながら、プロダクトの改善に取り組んだ。「使いやすいプロダクト」を常に意識し、最善のUIを模索した。',
-      ],
-      tags: ['UX research', 'UI/UX design'],
-      date: '2023 ~ 2025',
-      layout: 'pager',
-      images: [productDesignPage1, productDesignPage2, productDesignPage3, productDesignPage4, productDesignPage5],
     },
   },
   {

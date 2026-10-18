@@ -2,14 +2,17 @@
 
 @theme {
   --font-mono: "DM Mono", monospace;
+  --font-display: "Gen Interface JP Display", "Gen Interface JP", sans-serif;
+  --font-helvetica: "Helvetica Neue", Helvetica, "Gen Interface JP", sans-serif;
+
+  --color-ink: #1f1c1c;
+  --color-muted: #8d9495;
+  --color-paper: #efefef;
+  --color-brand: #00bdc3;
 }
 
 @layer base {
   :root {
-    --color-ink: #1f1c1c;
-    --color-paper: #f8f8f8;
-    --color-panel: #e8e8e8;
-    --color-accent: #38c1bd;
     font-family: "Gen Interface JP", sans-serif;
   }
 
@@ -18,7 +21,7 @@
   }
 
   html {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   body {
@@ -27,7 +30,7 @@
     color: var(--color-ink);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   img {
@@ -39,4 +42,8 @@
   button:not(:disabled) {
     cursor: pointer;
   }
+}
+
+@utility palt {
+  font-feature-settings: "palt" 1;
 }

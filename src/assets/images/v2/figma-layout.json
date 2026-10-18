@@ -1,0 +1,922 @@
+[
+ {
+  "file": "data-analytics-launch/process-01.png",
+  "nodeId": "3187:13332",
+  "name": "Screenshot 2026-10-12 at 21.20.31 1",
+  "page": "a-2",
+  "x": 64.0,
+  "y": 64.0,
+  "w": 268.0,
+  "h": 286.0
+ },
+ {
+  "file": "data-analytics-launch/process-02.png",
+  "nodeId": "3242:3968",
+  "name": "Group 1000006515",
+  "page": "a-2",
+  "x": 344.0,
+  "y": 64.0,
+  "w": 325.0,
+  "h": 286.0
+ },
+ {
+  "file": "data-analytics-launch/process-03.png",
+  "nodeId": "3187:13345",
+  "name": "Rectangle 3469024",
+  "page": "a-2",
+  "x": 592.0,
+  "y": 97.0,
+  "w": 24.0,
+  "h": 4.0
+ },
+ {
+  "file": "data-analytics-launch/process-04.png",
+  "nodeId": "3187:13336",
+  "name": "Screenshot 2026-10-12 at 21.23.35 1",
+  "page": "a-2",
+  "x": 693.0,
+  "y": 64.0,
+  "w": 558.0,
+  "h": 286.0
+ },
+ {
+  "file": "data-analytics-launch/process-05.png",
+  "nodeId": "3187:13337",
+  "name": "Screenshot 2026-10-12 at 21.24.26 1",
+  "page": "a-2",
+  "x": 1261.0,
+  "y": 64.0,
+  "w": 595.0,
+  "h": 286.0
+ },
+ {
+  "file": "data-analytics-launch/process-06.png",
+  "nodeId": "3187:13797",
+  "name": "image 266",
+  "page": "a-2",
+  "x": -37.0,
+  "y": 476.0,
+  "w": 501.0,
+  "h": 357.0
+ },
+ {
+  "file": "data-analytics-launch/process-07.png",
+  "nodeId": "3187:13794",
+  "name": "image 265",
+  "page": "a-2",
+  "x": 488.0,
+  "y": 476.0,
+  "w": 500.0,
+  "h": 356.0
+ },
+ {
+  "file": "data-analytics-launch/process-08.png",
+  "nodeId": "3188:15435",
+  "name": "image 272",
+  "page": "a-2",
+  "x": 1012.0,
+  "y": 476.0,
+  "w": 500.0,
+  "h": 356.0
+ },
+ {
+  "file": "data-analytics-launch/process-09.png",
+  "nodeId": "3188:15720",
+  "name": "image 273",
+  "page": "a-2",
+  "x": 1536.0,
+  "y": 476.0,
+  "w": 500.0,
+  "h": 356.0
+ },
+ {
+  "file": "brand-app/process-01.png",
+  "nodeId": "3199:1841",
+  "name": "Screenshot 2026-10-12 at 21.35.42 1",
+  "page": "d-2",
+  "x": 64.0,
+  "y": 113.61376953125,
+  "w": 594.8545532226562,
+  "h": 324.05792236328125
+ },
+ {
+  "file": "brand-app/process-02.png",
+  "nodeId": "3199:1843",
+  "name": "image 1",
+  "page": "d-2",
+  "x": 719.7762451171875,
+  "y": 113.61376953125,
+  "w": 367.0615234375,
+  "h": 332.7603759765625
+ },
+ {
+  "file": "brand-app/process-03.png",
+  "nodeId": "3200:1845",
+  "name": "image 263",
+  "page": "d-2",
+  "x": 1275.0,
+  "y": 113.61376953125,
+  "w": 209.9036102294922,
+  "h": 441.3486328125
+ },
+ {
+  "file": "brand-app/process-04.png",
+  "nodeId": "3201:1860",
+  "name": "image 302",
+  "page": "d-2",
+  "x": 1398.69873046875,
+  "y": 267.2929382324219,
+  "w": 209.9036102294922,
+  "h": 441.3486633300781
+ },
+ {
+  "file": "brand-app/process-05.png",
+  "nodeId": "3200:1849",
+  "name": "image 265",
+  "page": "d-2",
+  "x": 1522.3980712890625,
+  "y": 420.97235107421875,
+  "w": 209.9036102294922,
+  "h": 441.3486328125
+ },
+ {
+  "file": "brand-app/process-06.png",
+  "nodeId": "3200:1851",
+  "name": "Screenshot 2026-10-14 at 0.12.52 1",
+  "page": "d-2",
+  "x": 64.0,
+  "y": 544.25732421875,
+  "w": 279.7063903808594,
+  "h": 252.77813720703125
+ },
+ {
+  "file": "brand-app/process-07.png",
+  "nodeId": "3201:1857",
+  "name": "Screenshot 2026-10-12 at 21.37.31 1",
+  "page": "d-2",
+  "x": 361.0218200683594,
+  "y": 544.25732421875,
+  "w": 297.8330078125,
+  "h": 252.7783203125
+ },
+ {
+  "file": "brand-app/process-08.png",
+  "nodeId": "3200:1853",
+  "name": "Screenshot 2026-10-14 at 0.02.58 1",
+  "page": "d-2",
+  "x": 719.7762451171875,
+  "y": 544.25732421875,
+  "w": 367.0611572265625,
+  "h": 252.77825927734375
+ },
+ {
+  "file": "brand-app/process-09.png",
+  "nodeId": "3200:1847",
+  "name": "image 265",
+  "page": "d-2",
+  "x": 1646.0970458984375,
+  "y": 574.6513671875,
+  "w": 209.9036102294922,
+  "h": 441.3486328125
+ },
+ {
+  "file": "data-visualization/process-01.png",
+  "nodeId": "3188:15722",
+  "name": "Screenshot 2026-10-12 at 22.12.18 1",
+  "page": "f-2",
+  "x": 64.0,
+  "y": 64.0,
+  "w": 556.7860107421875,
+  "h": 323.860107421875
+ },
+ {
+  "file": "data-visualization/process-02.png",
+  "nodeId": "3238:3966",
+  "name": "Group 1000006513",
+  "page": "f-2",
+  "x": 644.708984375,
+  "y": 64.0,
+  "w": 541.3653564453125,
+  "h": 323.8603515625
+ },
+ {
+  "file": "data-visualization/process-03.png",
+  "nodeId": "3221:2377",
+  "name": "Screenshot 2026-10-12 at 22.13.08 1",
+  "page": "f-2",
+  "x": 1281.944091796875,
+  "y": 64.97900390625,
+  "w": 574.0559692382812,
+  "h": 322.88116455078125
+ },
+ {
+  "file": "data-visualization/process-04.png",
+  "nodeId": "3188:17110",
+  "name": "image 11",
+  "page": "f-2",
+  "x": -72.0,
+  "y": 507.9638671875,
+  "w": 493.0,
+  "h": 351.0
+ },
+ {
+  "file": "data-visualization/process-05.png",
+  "nodeId": "3188:15051",
+  "name": "image 270",
+  "page": "f-2",
+  "x": 457.0,
+  "y": 507.9638671875,
+  "w": 493.0,
+  "h": 351.0
+ },
+ {
+  "file": "data-visualization/process-06.png",
+  "nodeId": "3188:17115",
+  "name": "image 10",
+  "page": "f-2",
+  "x": 986.0,
+  "y": 507.9638671875,
+  "w": 493.0,
+  "h": 351.0
+ },
+ {
+  "file": "data-visualization/process-07.png",
+  "nodeId": "3188:15054",
+  "name": "image 271",
+  "page": "f-2",
+  "x": 1515.0,
+  "y": 507.9638671875,
+  "w": 493.0,
+  "h": 351.0
+ },
+ {
+  "file": "loyalty-program/process-01.png",
+  "nodeId": "3194:1272",
+  "name": "Screenshot 2026-10-14 at 2.47.56 1",
+  "page": "g-2",
+  "x": 64.0,
+  "y": 64.0,
+  "w": 623.0,
+  "h": 346.0
+ },
+ {
+  "file": "loyalty-program/process-02.png",
+  "nodeId": "3196:1692",
+  "name": "Screenshot 2026-10-14 at 3.27.38 1",
+  "page": "g-2",
+  "x": 713.0,
+  "y": 64.0,
+  "w": 233.0,
+  "h": 346.0
+ },
+ {
+  "file": "loyalty-program/process-03.png",
+  "nodeId": "3196:1690",
+  "name": "Screenshot 2026-10-14 at 3.27.02 1",
+  "page": "g-2",
+  "x": 972.0,
+  "y": 64.0,
+  "w": 254.0,
+  "h": 346.0
+ },
+ {
+  "file": "loyalty-program/process-04.png",
+  "nodeId": "3195:1273",
+  "name": "Screenshot 2026-10-14 at 2.49.18 1",
+  "page": "g-2",
+  "x": 1252.0,
+  "y": 64.0,
+  "w": 606.0,
+  "h": 155.0
+ },
+ {
+  "file": "loyalty-program/process-05.png",
+  "nodeId": "3195:1274",
+  "name": "Screenshot 2026-10-14 at 2.49.35 1",
+  "page": "g-2",
+  "x": 1252.0,
+  "y": 233.0,
+  "w": 250.0,
+  "h": 177.0
+ },
+ {
+  "file": "loyalty-program/process-06.png",
+  "nodeId": "3195:1275",
+  "name": "Screenshot 2026-10-14 at 2.49.50 1",
+  "page": "g-2",
+  "x": 1516.0,
+  "y": 233.0,
+  "w": 342.0,
+  "h": 177.0
+ },
+ {
+  "file": "loyalty-program/process-07.png",
+  "nodeId": "3196:1694",
+  "name": "image 298",
+  "page": "g-2",
+  "x": 673.0,
+  "y": 617.0,
+  "w": 573.0,
+  "h": 347.0
+ },
+ {
+  "file": "loyalty-program/process-08.png",
+  "nodeId": "3196:1681",
+  "name": "image 295",
+  "page": "g-2",
+  "x": 64.0,
+  "y": 689.0,
+  "w": 134.0,
+  "h": 275.0
+ },
+ {
+  "file": "loyalty-program/process-09.png",
+  "nodeId": "3196:1684",
+  "name": "image 296",
+  "page": "g-2",
+  "x": 242.0,
+  "y": 676.0,
+  "w": 405.0,
+  "h": 288.0
+ },
+ {
+  "file": "loyalty-program/process-10.png",
+  "nodeId": "3196:1687",
+  "name": "image 297",
+  "page": "g-2",
+  "x": 1273.0,
+  "y": 676.0,
+  "w": 405.0,
+  "h": 288.0
+ },
+ {
+  "file": "loyalty-program/process-11.png",
+  "nodeId": "3197:1816",
+  "name": "image 299",
+  "page": "g-2",
+  "x": 1722.0,
+  "y": 689.0,
+  "w": 134.0,
+  "h": 275.0
+ },
+ {
+  "file": "hakko/process-01.png",
+  "nodeId": "3204:2153",
+  "name": "Screenshot 2026-10-14 at 9.55.19 1",
+  "page": "h-2",
+  "x": 64.0,
+  "y": 64.0,
+  "w": 284.60772705078125,
+  "h": 106.54164123535156
+ },
+ {
+  "file": "hakko/process-02.png",
+  "nodeId": "3207:2351",
+  "name": "Screenshot 2026-10-14 at 10.23.34 1",
+  "page": "h-2",
+  "x": 358.0080261230469,
+  "y": 64.0,
+  "w": 105.99197387695312,
+  "h": 106.54192352294922
+ },
+ {
+  "file": "hakko/process-03.png",
+  "nodeId": "3238:3967",
+  "name": "Group 1000006514",
+  "page": "h-2",
+  "x": 1456.4619140625,
+  "y": 64.0,
+  "w": 399.5361328125,
+  "h": 209.0128631591797
+ },
+ {
+  "file": "hakko/process-04.png",
+  "nodeId": "3204:2103",
+  "name": "Frame 203",
+  "page": "h-2",
+  "x": 551.8408203125,
+  "y": 157.22216796875,
+  "w": 803.1967163085938,
+  "h": 285.6792907714844
+ },
+ {
+  "file": "hakko/process-05.png",
+  "nodeId": "3207:2356",
+  "name": "Screenshot 2026-10-14 at 10.27.22 1",
+  "page": "h-2",
+  "x": 64.0,
+  "y": 272.24462890625,
+  "w": 176.5508575439453,
+  "h": 102.60028839111328
+ },
+ {
+  "file": "hakko/process-06.png",
+  "nodeId": "3207:2359",
+  "name": "Screenshot 2026-10-14 at 10.33.31 1",
+  "page": "h-2",
+  "x": 251.04296875,
+  "y": 272.24462890625,
+  "w": 212.95729064941406,
+  "h": 102.60028076171875
+ },
+ {
+  "file": "hakko/process-07.png",
+  "nodeId": "3204:2137",
+  "name": "image 37",
+  "page": "h-2",
+  "x": 1456.4619140625,
+  "y": 442.9019470214844,
+  "w": 399.5380554199219,
+  "h": 129.76219177246094
+ },
+ {
+  "file": "hakko/process-08.png",
+  "nodeId": "3207:2347",
+  "name": "Screenshot 2026-10-14 at 10.18.29 1",
+  "page": "h-2",
+  "x": 64.0,
+  "y": 503.76171875,
+  "w": 400.0,
+  "h": 130.7125244140625
+ },
+ {
+  "file": "hakko/process-09.png",
+  "nodeId": "3204:2109",
+  "name": "Frame 204",
+  "page": "h-2",
+  "x": 551.8408203125,
+  "y": 582.54248046875,
+  "w": 803.1967163085938,
+  "h": 285.6792907714844
+ },
+ {
+  "file": "hakko/process-10.png",
+  "nodeId": "3207:2352",
+  "name": "Screenshot 2026-10-14 at 10.25.41 1",
+  "page": "h-2",
+  "x": 64.0,
+  "y": 648.474609375,
+  "w": 399.99993896484375,
+  "h": 143.32083129882812
+ },
+ {
+  "file": "hakko/process-11.png",
+  "nodeId": "3205:2341",
+  "name": "Screenshot 2026-10-14 at 10.04.07 1",
+  "page": "h-2",
+  "x": 1442.8779296875,
+  "y": 623.0810546875,
+  "w": 434.1708984375,
+  "h": 357.9186706542969
+ },
+ {
+  "file": "hakko/process-12.png",
+  "nodeId": "3207:2350",
+  "name": "Screenshot 2026-10-14 at 10.22.44 1",
+  "page": "h-2",
+  "x": 64.0,
+  "y": 805.7958984375,
+  "w": 399.99993896484375,
+  "h": 162.59657287597656
+ },
+ {
+  "file": "unified-admin/process-01.png",
+  "nodeId": "3192:3816",
+  "name": "Screenshot 2026-10-13 at 21.04.32 1",
+  "page": "b-2",
+  "x": 64.0,
+  "y": 64.0,
+  "w": 630.2060546875,
+  "h": 260.87799072265625
+ },
+ {
+  "file": "unified-admin/process-02.png",
+  "nodeId": "3194:1267",
+  "name": "Screenshot 2026-10-14 at 0.17.14 1",
+  "page": "b-2",
+  "x": 715.0050048828125,
+  "y": 64.0,
+  "w": 408.0906677246094,
+  "h": 386.3322448730469
+ },
+ {
+  "file": "unified-admin/process-03.png",
+  "nodeId": "3238:3964",
+  "name": "Group 1000006511",
+  "page": "b-2",
+  "x": 1275.56640625,
+  "y": 74.6162109375,
+  "w": 465.4370422363281,
+  "h": 229.3837432861328
+ },
+ {
+  "file": "unified-admin/process-04.png",
+  "nodeId": "3224:2807",
+  "name": "Polygon 2",
+  "page": "b-2",
+  "x": 1540.56591796875,
+  "y": 368.044189453125,
+  "w": 64.5625,
+  "h": 37.91943359375
+ },
+ {
+  "file": "unified-admin/process-05.png",
+  "nodeId": "3223:2798",
+  "name": "image 307",
+  "page": "b-2",
+  "x": 1329.71142578125,
+  "y": 398.1689453125,
+  "w": 357.14654541015625,
+  "h": 433.8311767578125
+ },
+ {
+  "file": "unified-admin/process-06.png",
+  "nodeId": "3224:2806",
+  "name": "Polygon 1",
+  "page": "b-2",
+  "x": 625.8291015625,
+  "y": 568.0,
+  "w": 64.5625,
+  "h": 37.91943359375
+ },
+ {
+  "file": "unified-admin/process-07.png",
+  "nodeId": "3224:2803",
+  "name": "Screenshot 2026-10-14 at 18.39.25 1",
+  "page": "b-2",
+  "x": 64.0,
+  "y": 610.9521484375,
+  "w": 1059.095703125,
+  "h": 221.048095703125
+ },
+ {
+  "file": "pos-reservation/process-01.png",
+  "nodeId": "3195:1285",
+  "name": "Screenshot 2026-10-13 at 21.37.20 1",
+  "page": "e-2",
+  "x": 64.0,
+  "y": 122.0,
+  "w": 571.0,
+  "h": 241.0
+ },
+ {
+  "file": "pos-reservation/process-02.png",
+  "nodeId": "3195:1292",
+  "name": "Screenshot 2026-10-13 at 21.39.21 1",
+  "page": "e-2",
+  "x": 675.0439453125,
+  "y": 120.0,
+  "w": 413.5361328125,
+  "h": 240.48562622070312
+ },
+ {
+  "file": "pos-reservation/process-03.png",
+  "nodeId": "3195:1296",
+  "name": "image 293",
+  "page": "e-2",
+  "x": 1285.0,
+  "y": 120.0,
+  "w": 411.0,
+  "h": 292.0
+ },
+ {
+  "file": "pos-reservation/process-04.png",
+  "nodeId": "3195:1299",
+  "name": "image 294",
+  "page": "e-2",
+  "x": 1445.0,
+  "y": 317.1581726074219,
+  "w": 411.0,
+  "h": 293.0
+ },
+ {
+  "file": "pos-reservation/process-05.png",
+  "nodeId": "3195:1293",
+  "name": "Screenshot 2026-10-13 at 21.44.33 1",
+  "page": "e-2",
+  "x": 683.617919921875,
+  "y": 373.8714599609375,
+  "w": 228.5655975341797,
+  "h": 76.2570571899414
+ },
+ {
+  "file": "pos-reservation/process-06.png",
+  "nodeId": "3238:3965",
+  "name": "Group 1000006512",
+  "page": "e-2",
+  "x": 64.0,
+  "y": 536.52294921875,
+  "w": 571.0,
+  "h": 241.0830078125
+ },
+ {
+  "file": "pos-reservation/process-07.png",
+  "nodeId": "3197:1823",
+  "name": "Screenshot 2026-10-13 at 21.48.45 1",
+  "page": "e-2",
+  "x": 666.646484375,
+  "y": 536.52294921875,
+  "w": 421.93359375,
+  "h": 177.19456481933594
+ },
+ {
+  "file": "pos-reservation/process-08.png",
+  "nodeId": "3198:1837",
+  "name": "image 301",
+  "page": "e-2",
+  "x": 1285.0,
+  "y": 515.316162109375,
+  "w": 411.0,
+  "h": 292.7628173828125
+ },
+ {
+  "file": "pos-reservation/process-09.png",
+  "nodeId": "3198:1834",
+  "name": "image 300",
+  "page": "e-2",
+  "x": 1445.0,
+  "y": 713.2371826171875,
+  "w": 411.0,
+  "h": 292.7628173828125
+ },
+ {
+  "file": "service-site/process-01.png",
+  "nodeId": "3194:1219",
+  "name": "2",
+  "page": "j-2",
+  "x": -26.4984130859375,
+  "y": 225.0,
+  "w": 280.1270446777344,
+  "h": 1123.2862548828125
+ },
+ {
+  "file": "service-site/process-02.png",
+  "nodeId": "3194:1233",
+  "name": "rsv",
+  "page": "j-2",
+  "x": 271.6286315917969,
+  "y": 225.0,
+  "w": 280.22662353515625,
+  "h": 1084.8638916015625
+ },
+ {
+  "file": "service-site/process-03.png",
+  "nodeId": "3194:1222",
+  "name": "regi",
+  "page": "j-2",
+  "x": 569.855224609375,
+  "y": 225.0,
+  "w": 280.0765075683594,
+  "h": 3140.319091796875
+ },
+ {
+  "file": "service-site/process-04.png",
+  "nodeId": "3194:1236",
+  "name": "payments",
+  "page": "j-2",
+  "x": 867.9317626953125,
+  "y": 225.0,
+  "w": 280.27728271484375,
+  "h": 2574.93603515625
+ },
+ {
+  "file": "service-site/process-05.png",
+  "nodeId": "3194:1245",
+  "name": "screencapture-stores-fun-campaign-event-2026-10-01-2026-10-13-23_58_04",
+  "page": "j-2",
+  "x": 1166.2091064453125,
+  "y": 225.0,
+  "w": 280.0,
+  "h": 1457.2227783203125
+ },
+ {
+  "file": "service-site/process-06.png",
+  "nodeId": "3194:1259",
+  "name": "screencapture-pr-2572-service-site-storesinc-service-site-workers-dev-bgm-2026-10-12-18_56_39",
+  "page": "j-2",
+  "x": 1464.2091064453125,
+  "y": 225.0,
+  "w": 280.0,
+  "h": 1931.820068359375
+ },
+ {
+  "file": "service-site/process-07.png",
+  "nodeId": "3194:1242",
+  "name": "1",
+  "page": "j-2",
+  "x": 1762.2091064453125,
+  "y": 225.0,
+  "w": 280.1270446777344,
+  "h": 724.128662109375
+ },
+ {
+  "file": "diversity-report/process-01.png",
+  "nodeId": "3146:6544",
+  "name": "image 64",
+  "page": "k-2",
+  "x": 64.0,
+  "y": 148.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-02.png",
+  "nodeId": "3146:6545",
+  "name": "image 61",
+  "page": "k-2",
+  "x": 519.0,
+  "y": 148.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-03.png",
+  "nodeId": "3146:6546",
+  "name": "image 63",
+  "page": "k-2",
+  "x": 974.0,
+  "y": 148.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-04.png",
+  "nodeId": "3146:6548",
+  "name": "image 71",
+  "page": "k-2",
+  "x": 1429.0,
+  "y": 148.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-05.png",
+  "nodeId": "3146:6556",
+  "name": "image 73",
+  "page": "k-2",
+  "x": 64.0,
+  "y": 420.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-06.png",
+  "nodeId": "3146:6552",
+  "name": "image 72",
+  "page": "k-2",
+  "x": 519.0,
+  "y": 420.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-07.png",
+  "nodeId": "3146:6549",
+  "name": "image 65",
+  "page": "k-2",
+  "x": 974.0,
+  "y": 420.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-08.png",
+  "nodeId": "3146:6551",
+  "name": "image 66",
+  "page": "k-2",
+  "x": 1429.0,
+  "y": 420.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-09.png",
+  "nodeId": "3146:6553",
+  "name": "image 67",
+  "page": "k-2",
+  "x": 64.0,
+  "y": 692.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-10.png",
+  "nodeId": "3146:6555",
+  "name": "image 70",
+  "page": "k-2",
+  "x": 519.0,
+  "y": 692.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-11.png",
+  "nodeId": "3146:6550",
+  "name": "image 68",
+  "page": "k-2",
+  "x": 974.0,
+  "y": 692.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "diversity-report/process-12.png",
+  "nodeId": "3146:6554",
+  "name": "image 69",
+  "page": "k-2",
+  "x": 1429.0,
+  "y": 692.0,
+  "w": 427.0,
+  "h": 240.0
+ },
+ {
+  "file": "data-analytics-research/process-01.png",
+  "nodeId": "3190:3803",
+  "name": "image 287",
+  "page": "c-2",
+  "x": 1483.0,
+  "y": 57.0,
+  "w": 327.0,
+  "h": 173.0
+ },
+ {
+  "file": "data-analytics-research/process-02.png",
+  "nodeId": "3149:6962",
+  "name": "Screenshot 2026-07-13 at 0.03.00 1",
+  "page": "c-2",
+  "x": 64.0,
+  "y": 64.0,
+  "w": 819.0,
+  "h": 357.0
+ },
+ {
+  "file": "data-analytics-research/process-03.png",
+  "nodeId": "3190:3793",
+  "name": "image 286",
+  "page": "c-2",
+  "x": 1032.0,
+  "y": 64.0,
+  "w": 412.0,
+  "h": 355.0
+ },
+ {
+  "file": "data-analytics-research/process-04.png",
+  "nodeId": "3190:3801",
+  "name": "image 288",
+  "page": "c-2",
+  "x": 1483.0,
+  "y": 242.0,
+  "w": 332.0,
+  "h": 185.0
+ },
+ {
+  "file": "data-analytics-research/process-05.png",
+  "nodeId": "3149:6968",
+  "name": "Screenshot 2026-07-13 at 0.01.24 1",
+  "page": "c-2",
+  "x": 64.0,
+  "y": 533.0,
+  "w": 824.0,
+  "h": 247.0
+ },
+ {
+  "file": "data-analytics-research/process-06.png",
+  "nodeId": "3190:3785",
+  "name": "image 283",
+  "page": "c-2",
+  "x": 1032.0,
+  "y": 535.0,
+  "w": 442.0,
+  "h": 276.0
+ },
+ {
+  "file": "data-analytics-research/process-07.png",
+  "nodeId": "3190:3806",
+  "name": "image 289",
+  "page": "c-2",
+  "x": 1495.0,
+  "y": 575.0,
+  "w": 110.0,
+  "h": 236.0
+ },
+ {
+  "file": "data-analytics-research/process-08.png",
+  "nodeId": "3190:3783",
+  "name": "image 284",
+  "page": "c-2",
+  "x": 1621.0,
+  "y": 575.0,
+  "w": 109.0,
+  "h": 235.0
+ },
+ {
+  "file": "data-analytics-research/process-09.png",
+  "nodeId": "3190:3788",
+  "name": "image 285",
+  "page": "c-2",
+  "x": 1746.0,
+  "y": 576.0,
+  "w": 110.0,
+  "h": 235.0
+ }
+]

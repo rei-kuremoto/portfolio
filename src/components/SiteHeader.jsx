@@ -8,7 +8,7 @@ import { routes } from '../hooks/useHashRoute'
 // wordmark (the top page's filter chips); the full-bleed rule closes the header.
 export default function SiteHeader({ onOpenMenu, children }) {
   return (
-    <header className="border-b-[1.5px] border-ink">
+    <header className="border-b border-ink">
       {/* sp: hamburger left, small wordmark centred */}
       <div className="relative flex h-[78px] items-center justify-center md:hidden">
         <button

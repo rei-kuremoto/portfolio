@@ -30,7 +30,7 @@ function MenuLink({ href, label, current, onNavigate }) {
   )
 }
 
-const Divider = () => <li aria-hidden="true" className="h-[1.5px] bg-ink" />
+const Divider = () => <li aria-hidden="true" className="h-px bg-ink" />
 
 // Right-hand drawer (menu_sp frame); full width on phones.
 export default function SiteMenu({ isOpen, onClose, currentHref }) {
@@ -60,7 +60,7 @@ export default function SiteMenu({ isOpen, onClose, currentHref }) {
         aria-label="Site menu"
         aria-hidden={!isOpen}
         inert={!isOpen}
-        className={`fixed inset-y-0 right-0 z-50 w-full max-w-[393px] overflow-y-auto border-l-[1.5px] border-ink bg-paper transition-transform duration-300 ${
+        className={`fixed inset-y-0 right-0 z-50 w-full max-w-[393px] overflow-y-auto border-l border-ink bg-paper transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

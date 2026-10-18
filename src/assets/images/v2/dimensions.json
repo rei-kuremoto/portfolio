@@ -1,0 +1,498 @@
+{
+"brand-app/hero.png": [
+824.0,
+952.0
+],
+"brand-app/process-01.png": [
+595.0,
+325.0
+],
+"brand-app/process-02.png": [
+368.0,
+333.0
+],
+"brand-app/process-03.png": [
+210.0,
+442.0
+],
+"brand-app/process-04.png": [
+210.0,
+442.0
+],
+"brand-app/process-05.png": [
+210.0,
+442.0
+],
+"brand-app/process-06.png": [
+280.0,
+253.0
+],
+"brand-app/process-07.png": [
+298.0,
+253.0
+],
+"brand-app/process-08.png": [
+368.0,
+253.0
+],
+"brand-app/process-09.png": [
+210.0,
+442.0
+],
+"data-analytics-launch/hero.png": [
+824.0,
+952.0
+],
+"data-analytics-launch/process-01.png": [
+268.0,
+286.0
+],
+"data-analytics-launch/process-02.png": [
+325.0,
+286.0
+],
+"data-analytics-launch/process-03.png": [
+24.0,
+4.0
+],
+"data-analytics-launch/process-04.png": [
+558.0,
+286.0
+],
+"data-analytics-launch/process-05.png": [
+595.0,
+286.0
+],
+"data-analytics-launch/process-06.png": [
+501.0,
+357.0
+],
+"data-analytics-launch/process-07.png": [
+500.0,
+356.0
+],
+"data-analytics-launch/process-08.png": [
+500.0,
+356.0
+],
+"data-analytics-launch/process-09.png": [
+500.0,
+356.0
+],
+"data-analytics-research/hero.png": [
+824.0,
+952.0
+],
+"data-analytics-research/process-01.png": [
+327.0,
+173.0
+],
+"data-analytics-research/process-02.png": [
+819.0,
+357.0
+],
+"data-analytics-research/process-03.png": [
+436.0,
+379.0
+],
+"data-analytics-research/process-04.png": [
+332.0,
+185.0
+],
+"data-analytics-research/process-05.png": [
+824.0,
+247.0
+],
+"data-analytics-research/process-06.png": [
+466.0,
+300.0
+],
+"data-analytics-research/process-07.png": [
+110.0,
+236.0
+],
+"data-analytics-research/process-08.png": [
+133.0,
+259.0
+],
+"data-analytics-research/process-09.png": [
+134.0,
+259.0
+],
+"data-visualization/hero.png": [
+824.0,
+952.0
+],
+"data-visualization/process-01.png": [
+557.0,
+324.0
+],
+"data-visualization/process-02.png": [
+542.0,
+324.0
+],
+"data-visualization/process-03.png": [
+575.0,
+323.0
+],
+"data-visualization/process-04.png": [
+493.0,
+352.0
+],
+"data-visualization/process-05.png": [
+493.0,
+351.0
+],
+"data-visualization/process-06.png": [
+493.0,
+351.0
+],
+"data-visualization/process-07.png": [
+493.0,
+352.0
+],
+"digital-ads/hero.png": [
+824.0,
+952.0
+],
+"diversity-report/hero.png": [
+824.0,
+952.0
+],
+"diversity-report/process-01.png": [
+451.0,
+264.0
+],
+"diversity-report/process-02.png": [
+451.0,
+264.0
+],
+"diversity-report/process-03.png": [
+451.0,
+264.0
+],
+"diversity-report/process-04.png": [
+451.0,
+264.0
+],
+"diversity-report/process-05.png": [
+451.0,
+264.0
+],
+"diversity-report/process-06.png": [
+451.0,
+264.0
+],
+"diversity-report/process-07.png": [
+451.0,
+264.0
+],
+"diversity-report/process-08.png": [
+451.0,
+264.0
+],
+"diversity-report/process-09.png": [
+451.0,
+264.0
+],
+"diversity-report/process-10.png": [
+451.0,
+264.0
+],
+"diversity-report/process-11.png": [
+451.0,
+264.0
+],
+"diversity-report/process-12.png": [
+451.0,
+264.0
+],
+"grid/brand-app.png": [
+410.0,
+228.0
+],
+"grid/data-analytics-launch.png": [
+410.0,
+228.0
+],
+"grid/data-analytics-research.png": [
+410.0,
+228.0
+],
+"grid/data-visualization.png": [
+410.0,
+228.0
+],
+"grid/digital-ads.png": [
+410.0,
+228.0
+],
+"grid/diversity-report.png": [
+410.0,
+228.0
+],
+"grid/hakko.png": [
+410.0,
+228.0
+],
+"grid/loyalty-program.png": [
+410.0,
+228.0
+],
+"grid/new-grad-events.png": [
+410.0,
+228.0
+],
+"grid/pos-reservation.png": [
+410.0,
+228.0
+],
+"grid/service-site.png": [
+410.0,
+228.0
+],
+"grid/unified-admin.png": [
+410.0,
+228.0
+],
+"hakko/hero.png": [
+824.0,
+952.0
+],
+"hakko/process-01.png": [
+285.0,
+107.0
+],
+"hakko/process-02.png": [
+106.0,
+107.0
+],
+"hakko/process-03.png": [
+400.0,
+210.0
+],
+"hakko/process-04.png": [
+804.0,
+286.0
+],
+"hakko/process-05.png": [
+177.0,
+103.0
+],
+"hakko/process-06.png": [
+213.0,
+103.0
+],
+"hakko/process-07.png": [
+400.0,
+130.0
+],
+"hakko/process-08.png": [
+400.0,
+131.0
+],
+"hakko/process-09.png": [
+804.0,
+286.0
+],
+"hakko/process-10.png": [
+400.0,
+144.0
+],
+"hakko/process-11.png": [
+435.0,
+358.0
+],
+"hakko/process-12.png": [
+400.0,
+163.0
+],
+"loyalty-program/hero.png": [
+824.0,
+952.0
+],
+"loyalty-program/process-01.png": [
+623.0,
+346.0
+],
+"loyalty-program/process-02.png": [
+233.0,
+346.0
+],
+"loyalty-program/process-03.png": [
+254.0,
+346.0
+],
+"loyalty-program/process-04.png": [
+606.0,
+155.0
+],
+"loyalty-program/process-05.png": [
+250.0,
+177.0
+],
+"loyalty-program/process-06.png": [
+342.0,
+177.0
+],
+"loyalty-program/process-07.png": [
+573.0,
+347.0
+],
+"loyalty-program/process-08.png": [
+134.0,
+275.0
+],
+"loyalty-program/process-09.png": [
+405.0,
+288.0
+],
+"loyalty-program/process-10.png": [
+405.0,
+288.0
+],
+"loyalty-program/process-11.png": [
+134.0,
+275.0
+],
+"new-grad-events/hero.png": [
+824.0,
+952.0
+],
+"pos-reservation/hero.png": [
+824.0,
+952.0
+],
+"pos-reservation/process-01.png": [
+571.0,
+241.0
+],
+"pos-reservation/process-02.png": [
+414.0,
+241.0
+],
+"pos-reservation/process-03.png": [
+411.0,
+292.0
+],
+"pos-reservation/process-04.png": [
+411.0,
+293.0
+],
+"pos-reservation/process-05.png": [
+229.0,
+77.0
+],
+"pos-reservation/process-06.png": [
+571.0,
+242.0
+],
+"pos-reservation/process-07.png": [
+422.0,
+178.0
+],
+"pos-reservation/process-08.png": [
+411.0,
+293.0
+],
+"pos-reservation/process-09.png": [
+411.0,
+293.0
+],
+"service-site/hero.png": [
+824.0,
+952.0
+],
+"service-site/process-01.png": [
+305.0,
+875.0
+],
+"service-site/process-02.png": [
+305.0,
+865.0
+],
+"service-site/process-03.png": [
+305.0,
+865.0
+],
+"service-site/process-04.png": [
+305.0,
+865.0
+],
+"service-site/process-05.png": [
+304.0,
+865.0
+],
+"service-site/process-06.png": [
+304.0,
+865.0
+],
+"service-site/process-07.png": [
+305.0,
+749.0
+],
+"unified-admin/hero.png": [
+824.0,
+952.0
+],
+"unified-admin/process-01.png": [
+631.0,
+261.0
+],
+"unified-admin/process-02.png": [
+409.0,
+387.0
+],
+"unified-admin/process-03.png": [
+468.0,
+232.0
+],
+"unified-admin/process-04.png": [
+51.0,
+28.0
+],
+"unified-admin/process-05.png": [
+382.0,
+458.0
+],
+"unified-admin/process-06.png": [
+51.0,
+28.0
+],
+"unified-admin/process-07.png": [
+1060.0,
+222.0
+],
+"service-site/capture-01.webp": [
+280.0,
+2572.5
+],
+"service-site/capture-02.webp": [
+280.0,
+3139.5
+],
+"service-site/capture-03.webp": [
+280.0,
+1931.75
+],
+"service-site/capture-04.webp": [
+280.0,
+1457.25
+],
+"service-site/capture-05.webp": [
+280.0,
+723.75
+],
+"service-site/capture-06.webp": [
+280.0,
+1353.5
+],
+"service-site/capture-07.webp": [
+280.0,
+2728.25
+],
+"service-site/capture-08.webp": [
+280.0,
+2315.0
+]
+}

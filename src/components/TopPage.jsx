@@ -15,7 +15,7 @@ function FilterChips({ value, onChange }) {
             type="button"
             onClick={() => onChange(group.key)}
             aria-pressed={selected}
-            className={`rounded-full border-[1.5px] border-ink px-[10px] py-[2px] font-mono text-[16px] tracking-[-0.16px] ${
+            className={`rounded-full border border-ink px-[10px] py-[2px] font-mono text-[16px] tracking-[-0.16px] ${
               selected ? 'bg-ink text-white' : 'text-ink'
             }`}
           >
@@ -70,7 +70,7 @@ function closingRule(index, count) {
   const lg = index % 3 !== 2
   if (!md && !lg) return ''
   return [
-    'relative after:absolute after:top-0 after:-right-[1.5px] after:-bottom-[1.5px] after:hidden after:w-[1.5px] after:bg-ink',
+    'relative after:absolute after:top-0 after:-right-px after:-bottom-px after:hidden after:w-px after:bg-ink',
     md && 'md:after:block',
     md && !lg && 'lg:after:hidden',
     !md && lg && 'lg:after:block',
@@ -104,7 +104,7 @@ export default function TopPage({ onOpenMenu }) {
           {visible.map((project, index) => (
             <li
               key={project.slug}
-              className={`border-b-[1.5px] border-ink py-[46px] md:border-l-[1.5px] md:pt-[30px] md:pb-[23px] md:[&:nth-child(2n+1)]:border-l-0 lg:[&:nth-child(2n+1)]:border-l-[1.5px] lg:[&:nth-child(3n+1)]:border-l-0 ${closingRule(index, visible.length)}`}
+              className={`border-b border-ink py-[46px] md:border-l md:pt-[30px] md:pb-[23px] md:[&:nth-child(2n+1)]:border-l-0 lg:[&:nth-child(2n+1)]:border-l lg:[&:nth-child(3n+1)]:border-l-0 ${closingRule(index, visible.length)}`}
             >
               <ProjectCard project={project} />
             </li>

@@ -26,9 +26,13 @@ export default function ReportPager({ pages }) {
   const current = pages[page]
   return (
     <div className="flex flex-col gap-4">
-      <div className="w-full border-[1.5px] border-ink">
-        <img src={current.src} width={current.width} height={current.height} alt="" className="h-auto w-full" />
-      </div>
+      <img
+        src={current.src}
+        width={current.width}
+        height={current.height}
+        alt=""
+        className="h-auto w-full shadow-[0_2px_12px_rgba(0,0,0,0.1)]"
+      />
       <div className="flex items-center gap-4 text-sm font-medium">
         <button
           type="button"

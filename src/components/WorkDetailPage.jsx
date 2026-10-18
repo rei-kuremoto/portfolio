@@ -118,9 +118,9 @@ export default function WorkDetailPage({ project, onOpenMenu }) {
         </div>
 
         {/* Bleeds past the 1440px container so its rules and the capture strip reach the viewport edge. */}
-        <div className="min-w-0 border-t-[1.5px] border-ink md:mr-[min(0px,calc((1440px-100vw)/2))] md:border-t-0 md:border-l-[1.5px]">
+        <div className="min-w-0 border-t border-ink md:mr-[min(0px,calc((1440px-100vw)/2))] md:border-t-0 md:border-l">
           {project.summary && (
-            <p className="border-b-[1.5px] border-ink px-6 py-7 text-[14px] leading-[1.6] text-muted md:px-12">
+            <p className="border-b border-ink px-6 py-7 text-[14px] leading-[1.6] text-muted md:px-12">
               {project.summary}
             </p>
           )}

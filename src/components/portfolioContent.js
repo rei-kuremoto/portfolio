@@ -34,6 +34,12 @@ const gridImage = (slug) => image(`grid/${slug}.png`)
 const detailImage = (slug, number) => image(`${slug}/process-${number}.png`)
 // Full-length page captures, exported from the columns in Figma frame 3254:6302.
 const captureImage = (number) => image(`service-site/capture-${number}.webp`)
+// Diversity report spreads (1920×1080), shown one at a time in a pager.
+const reportPages = Object.entries(
+  import.meta.glob('../assets/images/detail/diversity-report/*.webp', { eager: true, import: 'default' }),
+)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, src]) => ({ src, width: 1920, height: 1080 }))
 // Image area of each project's first Figma page.
 const heroImage = (slug) => image(`${slug}/hero.png`)
 
@@ -485,6 +491,9 @@ export const projects = [
     // Fill state of the five process circles, as drawn on the Figma project page.
     processIndicator: ['empty', 'half', 'full', 'full', 'full'],
     gridImage: gridImage('diversity-report'),
+    // The full report as a page-by-page slider (pages from the previous site),
+    // followed by the spread grid.
+    pager: reportPages,
     sections: [
       {
         caption: null,

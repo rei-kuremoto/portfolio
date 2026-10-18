@@ -2,6 +2,7 @@ import { metaLabels } from './portfolioContent'
 import SiteHeader from './SiteHeader'
 import BackLink from './BackLink'
 import ProcessIndicator from './ProcessIndicator'
+import ReportPager from './ReportPager'
 import useStickyTop from '../hooks/useStickyTop'
 
 const ROW_GAP = 12
@@ -127,6 +128,7 @@ export default function WorkDetailPage({ project, onOpenMenu }) {
             <CaptureStrip captures={project.captures} />
           ) : (
             <div className="flex flex-col gap-[74px] px-6 pt-10 pb-24 md:px-12 md:pt-[59px]">
+              {project.pager && <ReportPager pages={project.pager} />}
               {project.sections.map((section, index) => (
                 <Section key={index} section={section} />
               ))}

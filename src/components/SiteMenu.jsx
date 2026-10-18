@@ -30,7 +30,8 @@ function MenuLink({ href, label, current, onNavigate }) {
   )
 }
 
-const Divider = () => <li aria-hidden="true" className="h-px bg-ink" />
+// Full panel width: pulls back over the list's left padding.
+const Divider = () => <li aria-hidden="true" className="-ml-10 h-px bg-ink" />
 
 // Right-hand drawer (menu_sp frame); full width on phones.
 export default function SiteMenu({ isOpen, onClose, currentHref }) {
@@ -60,8 +61,9 @@ export default function SiteMenu({ isOpen, onClose, currentHref }) {
         aria-label="Site menu"
         aria-hidden={!isOpen}
         inert={!isOpen}
-        className={`fixed inset-y-0 right-0 z-50 w-full max-w-[393px] overflow-y-auto border-l border-ink bg-paper transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        // sp: slides in from the left (next to the hamburger); pc: from the right (under "menu").
+        className={`fixed inset-y-0 left-0 z-50 w-full max-w-[393px] overflow-y-auto border-r border-ink bg-paper transition-transform duration-300 md:right-0 md:left-auto md:border-r-0 md:border-l ${
+          isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-full'
         }`}
       >
         <button
@@ -78,7 +80,6 @@ export default function SiteMenu({ isOpen, onClose, currentHref }) {
             <Divider key={`divider-${index}`} />,
             ...group.map((project) => link(routes.work(project.slug), project.label.join(' '))),
           ])}
-          <Divider />
         </ul>
       </nav>
     </>

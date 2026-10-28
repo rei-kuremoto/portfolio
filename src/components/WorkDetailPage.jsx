@@ -5,7 +5,9 @@ import ProcessIndicator from './ProcessIndicator'
 import ReportPager from './ReportPager'
 import useStickyTop from '../hooks/useStickyTop'
 
-const ROW_GAP = 12
+// Gaps between images in a row and between rows; a section can override them.
+const IMAGE_GAP = 12
+const ROW_GAP = 24
 
 // A row item is one image, or an array of images stacked vertically.
 const aspect = (item) =>
@@ -19,12 +21,12 @@ function Image({ image }) {
 
 // Items share one height (flex-grow by aspect ratio) and the row never grows past
 // the images' Figma size.
-function ImageRow({ items }) {
-  const maxWidth = items.reduce((sum, item) => sum + naturalWidth(item), 0) + ROW_GAP * (items.length - 1)
+function ImageRow({ items, gap }) {
+  const maxWidth = items.reduce((sum, item) => sum + naturalWidth(item), 0) + gap * (items.length - 1)
   return (
-    <div className="flex w-full" style={{ gap: ROW_GAP, maxWidth }}>
+    <div className="flex w-full" style={{ gap, maxWidth }}>
       {items.map((item, index) => (
-        <div key={index} className="flex min-w-0 flex-col" style={{ flex: `${aspect(item)} 1 0%`, gap: ROW_GAP }}>
+        <div key={index} className="flex min-w-0 flex-col" style={{ flex: `${aspect(item)} 1 0%`, gap }}>
           {Array.isArray(item) ? item.map((image) => <Image key={image.src} image={image} />) : <Image image={item} />}
         </div>
       ))}
@@ -36,9 +38,9 @@ function Section({ section }) {
   return (
     <section className="flex flex-col gap-5">
       {section.caption && <p className="text-[14px] leading-[1.4] text-muted">{section.caption}</p>}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col" style={{ gap: section.rowGap ?? ROW_GAP }}>
         {section.rows.map((items, index) => (
-          <ImageRow key={index} items={items} />
+          <ImageRow key={index} items={items} gap={section.imageGap ?? IMAGE_GAP} />
         ))}
       </div>
     </section>
@@ -68,6 +70,7 @@ function CaptureStrip({ captures }) {
 }
 
 function Overview({ project }) {
+  const meta = Object.entries(metaLabels).filter(([key]) => project[key])
   return (
     <div className="flex flex-col">
       <p className="palt font-display text-[14px] leading-[1.4] font-semibold tracking-[0.28px] text-muted">
@@ -76,25 +79,42 @@ function Overview({ project }) {
       <h1 className="palt mt-[10px] max-w-[502px] font-display text-[28px] leading-[1.3] font-semibold tracking-[0.4px] md:text-[40px]">
         {project.title.replace('\n', '')}
       </h1>
-      <ul className="mt-10 max-w-[590px] list-disc font-display text-[16px] leading-[1.6]">
-        {project.description.map((item) => (
-          <li key={item} className="ms-6 mb-4 last:mb-0">
-            {item}
-          </li>
-        ))}
-      </ul>
-      <dl className="mt-16 grid grid-cols-[89px_1fr] gap-x-10 gap-y-5 font-display text-[14px] leading-[1.6] font-semibold">
-        {Object.entries(metaLabels).map(([key, label]) => (
-          <div key={key} className="contents">
-            <dt className="text-muted">{label}</dt>
-            <dd className="m-0">{project[key]}</dd>
-          </div>
-        ))}
-      </dl>
-      <div className="mt-[52px] flex flex-wrap items-center gap-4">
-        <ProcessIndicator states={project.processIndicator} />
-        <p className="font-helvetica text-[14px] leading-[1.8] font-medium text-brand">{project.process.join(', ')}</p>
-      </div>
+      {project.lead && <p className="mt-10 max-w-[590px] font-display text-[16px] leading-[1.6]">{project.lead}</p>}
+      {project.note && (
+        <p className="mt-5 text-[14px] leading-[1.4] text-muted">
+          {project.note.map((line) => (
+            <span key={line} className="block">
+              {line}
+            </span>
+          ))}
+        </p>
+      )}
+      {/* Projects carried over from the previous site leave out some of these. */}
+      {project.description && (
+        <ul className="mt-10 max-w-[590px] list-disc font-display text-[16px] leading-[1.6]">
+          {project.description.map((item) => (
+            <li key={item} className="ms-6 mb-4 last:mb-0">
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+      {meta.length > 0 && (
+        <dl className="mt-16 grid grid-cols-[89px_1fr] gap-x-10 gap-y-5 font-display text-[14px] leading-[1.6] font-semibold">
+          {meta.map(([key, label]) => (
+            <div key={key} className="contents">
+              <dt className="text-muted">{label}</dt>
+              <dd className="m-0">{project[key]}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+      {project.process && (
+        <div className="mt-[52px] flex flex-wrap items-center gap-4">
+          <ProcessIndicator states={project.processIndicator} />
+          <p className="font-helvetica text-[14px] leading-[1.8] font-medium text-brand">{project.process.join(', ')}</p>
+        </div>
+      )}
     </div>
   )
 }
@@ -104,7 +124,9 @@ export default function WorkDetailPage({ project, onOpenMenu }) {
   return (
     <>
       <SiteHeader onOpenMenu={onOpenMenu} />
-      <main className="mx-auto grid max-w-[1440px] grid-cols-1 md:grid-cols-2">
+      <main
+        className={`mx-auto grid max-w-[1440px] grid-cols-1 ${project.wideImages ? 'md:grid-cols-[1fr_2fr]' : 'md:grid-cols-2'}`}
+      >
         {/* pc: sticks to the viewport while the right column scrolls */}
         <div
           ref={overviewRef}

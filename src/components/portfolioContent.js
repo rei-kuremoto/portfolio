@@ -43,6 +43,26 @@ const reportPages = Object.entries(
 // Image area of each project's first Figma page.
 const heroImage = (slug) => image(`${slug}/hero.png`)
 
+// Projects carried over from the previous site (no Figma page in the redesign);
+// their images keep their original pixel size.
+const legacyModules = import.meta.glob(
+  ['../assets/images/detail/version*/*.png', '../assets/images/photo-*.{jpg,png}'],
+  { eager: true, import: 'default' },
+)
+const legacyImage = (path, width, height) => {
+  const src = legacyModules[`../assets/images/${path}`]
+  if (!src) throw new Error(`Missing image ${path}`)
+  return { src, width, height }
+}
+const version2Image = (name) => legacyImage(`detail/version2/${name}.png`, 925, 618)
+const version3Image = (name, portrait = false) =>
+  legacyImage(`detail/version3/${name}.png`, portrait ? 440 : 929, 629)
+const photo = (name, orientation) =>
+  legacyImage(
+    `photo-${name}`,
+    ...{ landscape: [1600, 1063], portrait: [1063, 1600], small: [1007, 669] }[orientation],
+  )
+
 export const processSteps = ['リサーチ', '課題定義', '議論・アイデア出し', 'プロトタイプ', 'デリバリー']
 
 export const metaLabels = {
@@ -55,6 +75,7 @@ export const projectGroups = [
   { key: 'all', label: 'all' },
   { key: 'uiux', label: 'ui/ux' },
   { key: 'graphic', label: 'graphic' },
+  { key: 'other', label: 'other' },
 ]
 
 // Order matches the top-page grid.
@@ -562,14 +583,100 @@ export const projects = [
       },
     ],
   },
+  // Below: carried over from the previous site. Text is from its detail modals;
+  // they have no team or process data, so those rows are left out.
+  {
+    slug: 'version3',
+    group: 'graphic',
+    alsoIn: ['other'],
+    label: ['VERSION #3'],
+    category: '全社イベント',
+    title: 'VERSION by STORES #3',
+    description: [
+      '年2度、プロダクトリリースや改善の取り組みを祝う全社イベントの展示物やグッズ制作。',
+      '「大感謝祭」のテーマに合わせて企画者とイメージを擦り合わせながら制作物を提案し、リードデザイナーのメインビジュアルとイラストをもとにアパレルやグッズ、イベント装飾品を展開した。イベントをより盛り上げる工夫を意識しながら取り組んだ。',
+    ],
+    period: '2026.05',
+    role: 'グッズデザイン、グラフィックデザイン、体験デザイン',
+    gridImage: gridImage('version3'),
+    sections: [
+      {
+        caption: null,
+        rows: [
+          [version3Image('01-wall'), version3Image('02-quiz')],
+          [version3Image('03-laptop'), version3Image('04-gacha')],
+          [
+            version3Image('05-tshirt-white', true),
+            version3Image('06-tshirt-black', true),
+            version3Image('07-tote-keychain', true),
+            version3Image('08-keychain-hand', true),
+          ],
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'version2',
+    group: 'graphic',
+    alsoIn: ['other'],
+    label: ['VERSION #2'],
+    category: '全社イベント',
+    title: 'VERSION by STORES #2',
+    description: [
+      '年2度、プロダクトリリースや改善の取り組みを祝う全社イベントの展示物やグッズ制作。',
+      '日常の仕事風景を撮影して展示物に展開したほか、リードデザイナーが作成したメインビジュアルをもとに、アパレルや記念ステッカーを制作した。',
+    ],
+    period: '2025.10',
+    role: 'グッズデザイン、写真撮影、展示デザイン',
+    gridImage: gridImage('version2'),
+    sections: [
+      {
+        caption: null,
+        rows: [
+          [version2Image('01-wall'), version2Image('02-pointing')],
+          [version2Image('03-writing'), version2Image('04-stickers')],
+          [version2Image('05-tshirt-white'), version2Image('06-shirts-folded')],
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'photography',
+    group: 'other',
+    label: ['Photography'],
+    category: 'personal work',
+    title: 'Photography',
+    // A plain paragraph instead of the bulleted description, then the gear in caption size.
+    lead: '心が動いた瞬間を写真におさめています。',
+    note: ['SONY NEX-6 /', 'Sigma E 18-50mm'],
+    // Narrower overview column (1fr : 2fr) so the photos get more room.
+    wideImages: true,
+    gridImage: gridImage('photography'),
+    sections: [
+      {
+        caption: null,
+        imageGap: 24,
+        rowGap: 40,
+        rows: [
+          [photo('dsc04084.jpg', 'portrait'), photo('dsc00899.jpg', 'landscape')],
+          [photo('dsc01562-1.png', 'small'), photo('dsc01893.jpg', 'portrait')],
+          [photo('dsc09637.jpg', 'portrait'), photo('dsc09607.jpg', 'landscape')],
+          [photo('dsc09627.jpg', 'landscape'), photo('dsc01855.jpg', 'portrait')],
+          [photo('dsc00944.jpg', 'landscape'), photo('dsc00748-1.png', 'small')],
+        ],
+      },
+    ],
+  },
 ]
 
 export const projectBySlug = Object.fromEntries(projects.map((project) => [project.slug, project]))
 
-// Menu order (from the menu_sp frame), split into its two groups.
+// Menu order (from the menu_sp frame), split into its groups; the third holds
+// the projects carried over from the previous site.
 export const menuProjects = [
   ['data-analytics-launch', 'unified-admin', 'data-analytics-research', 'brand-app', 'pos-reservation', 'data-visualization', 'loyalty-program', 'hakko'],
   ['service-site', 'diversity-report', 'new-grad-events', 'digital-ads'],
+  ['version3', 'version2', 'photography'],
 ].map((slugs) => slugs.map((slug) => projectBySlug[slug]))
 
 // Design philosophy page (design_philosophy frame). Each paragraph is a list of

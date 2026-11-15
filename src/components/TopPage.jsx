@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import rings from '../assets/images/v2/ui/rings.svg'
-import { projects, projectGroups } from './portfolioContent'
+import { allProjects, projectGroups } from './portfolioContent'
 import { routes } from '../hooks/useHashRoute'
 import SiteHeader from './SiteHeader'
 
@@ -83,11 +83,8 @@ export default function TopPage({ onOpenMenu }) {
   const [group, setGroup] = useState('all')
   const visible =
     group === 'all'
-      ? projects
-      : [
-          ...projects.filter((project) => project.group === group),
-          ...projects.filter((project) => project.alsoIn?.includes(group)),
-        ]
+      ? allProjects
+      : allProjects.filter((project) => project.group === group || project.alsoIn?.includes(group))
 
   return (
     <>

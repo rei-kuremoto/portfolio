@@ -9,13 +9,13 @@ import { routes } from '../hooks/useHashRoute'
 export default function SiteHeader({ onOpenMenu, children }) {
   return (
     <header className="border-b border-ink">
-      {/* sp: hamburger left, small wordmark centred */}
+      {/* sp: hamburger right (the menu slides in from the right), small wordmark centred */}
       <div className="relative flex h-[78px] items-center justify-center md:hidden">
         <button
           type="button"
           onClick={onOpenMenu}
           aria-label="Open menu"
-          className="absolute top-[15px] left-[15px] size-12"
+          className="absolute top-[15px] right-[15px] size-12"
         >
           <img src={hamburger} alt="" className="size-full" />
         </button>

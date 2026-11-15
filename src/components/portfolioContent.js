@@ -3,6 +3,7 @@
 // Text is kept verbatim from Figma.
 
 import dimensions from '../assets/images/v2/dimensions.json'
+import { worksOrder } from './worksOrder'
 
 // Every image is keyed by its path under assets/images/v2 (e.g. "hakko/process-01.png")
 // and carries its display size in CSS px (from dimensions.json; grid cards and service-site captures are 4x exports, the rest 2x).
@@ -73,8 +74,8 @@ export const metaLabels = {
 
 export const projectGroups = [
   { key: 'all', label: 'all' },
-  { key: 'uiux', label: 'ui/ux' },
   { key: 'graphic', label: 'graphic' },
+  { key: 'uiux', label: 'ui/ux' },
   { key: 'other', label: 'other' },
 ]
 
@@ -583,21 +584,25 @@ export const projects = [
       },
     ],
   },
-  // Below: carried over from the previous site. Text is from its detail modals;
-  // they have no team or process data, so those rows are left out.
+  // Below: carried over from the previous site.
   {
     slug: 'version3',
     group: 'graphic',
     alsoIn: ['other'],
     label: ['VERSION #3'],
-    category: '全社イベント',
-    title: 'VERSION by STORES #3',
+    category: 'VERSION by STORES #3',
+    title: '全社イベントの企画デザイン、\nグッズデザイン',
     description: [
-      '年2度、プロダクトリリースや改善の取り組みを祝う全社イベントの展示物やグッズ制作。',
-      '「大感謝祭」のテーマに合わせて企画者とイメージを擦り合わせながら制作物を提案し、リードデザイナーのメインビジュアルとイラストをもとにアパレルやグッズ、イベント装飾品を展開した。イベントをより盛り上げる工夫を意識しながら取り組んだ。',
+      '年2度、プロダクトリリースや社員の取り組みを祝う全社イベントの企画のためのデザインやグッズ制作。',
+      '「大感謝祭」のテーマに合わせて企画者とイメージを擦り合わせながら、リードデザイナーのメインビジュアルをもとに、投影スライド、景品、展示物などのデザインを行なった。また、イベント前から盛り上げるため、参加者がSlackのプロフィール画像を装飾できるツールを提案・制作した。',
+      '本編プログラムのスペースと懇親スペースに合わせてデザインのトーンを変えたり、参加者の流れを踏まえた展示物の配置を計画したりすることを通じて、体験づくりの細部にこだわった。',
     ],
-    period: '2026.05',
-    role: 'グッズデザイン、グラフィックデザイン、体験デザイン',
+    period: '2026.3 ~ 2026.4',
+    role: 'グッズ展開、デザイン、当日スタッフ',
+    team: 'デザイナー（3）、実行委員',
+    process: ['リサーチ', '課題定義', '議論・アイデア出し', 'プロトタイプ', 'デリバリー'],
+    // Fill state of the five process circles, as drawn on the Figma project page.
+    processIndicator: ['empty', 'full', 'full', 'full', 'full'],
     gridImage: gridImage('version3'),
     sections: [
       {
@@ -620,14 +625,19 @@ export const projects = [
     group: 'graphic',
     alsoIn: ['other'],
     label: ['VERSION #2'],
-    category: '全社イベント',
-    title: 'VERSION by STORES #2',
+    category: 'VERSION by STORES #2',
+    title: '全社イベントの企画デザイン、\nグッズデザイン',
     description: [
-      '年2度、プロダクトリリースや改善の取り組みを祝う全社イベントの展示物やグッズ制作。',
-      '日常の仕事風景を撮影して展示物に展開したほか、リードデザイナーが作成したメインビジュアルをもとに、アパレルや記念ステッカーを制作した。',
+      '年2度、プロダクトリリースや社員の取り組みを祝う全社イベントの展示物やグッズ制作。',
+      'リードデザイナーが作成したメインビジュアルをもとに、展示物、投影スライド、イベントアパレルや記念ステッカーを制作した。',
+      '日常の仕事風景を撮影してフォトパネル展示に展開した。バランスよく社員の取り組みを伝えられるよう、幅広い部門の人を撮るようにしたり、活動テーマごとにパネルを分けたりしてレイアウトした。',
     ],
-    period: '2025.10',
-    role: 'グッズデザイン、写真撮影、展示デザイン',
+    period: '2025.8 ~ 2025.9',
+    role: 'グッズ展開、デザイン、当日スタッフ',
+    team: 'デザイナー（3）、実行委員',
+    process: ['リサーチ', '課題定義', '議論・アイデア出し', 'プロトタイプ', 'デリバリー'],
+    // Fill state of the five process circles, as drawn on the Figma project page.
+    processIndicator: ['empty', 'empty', 'full', 'full', 'full'],
     gridImage: gridImage('version2'),
     sections: [
       {
@@ -671,13 +681,17 @@ export const projects = [
 
 export const projectBySlug = Object.fromEntries(projects.map((project) => [project.slug, project]))
 
-// Menu order (from the menu_sp frame), split into its groups; the third holds
-// the projects carried over from the previous site.
-export const menuProjects = [
-  ['data-analytics-launch', 'unified-admin', 'data-analytics-research', 'brand-app', 'pos-reservation', 'data-visualization', 'loyalty-program', 'hakko'],
-  ['service-site', 'diversity-report', 'new-grad-events', 'digital-ads'],
-  ['version3', 'version2', 'photography'],
-].map((slugs) => slugs.map((slug) => projectBySlug[slug]))
+// Order of the "all" grid on the top page (edit it in worksOrder.js).
+export const allProjects = worksOrder.map((slug) => projectBySlug[slug])
+
+// The menu keeps the grid order, split into groups: other, graphic, then ui/ux.
+// A work listed under several groups goes in the first of these it belongs to.
+const menuGroups = ['other', 'graphic', 'uiux']
+const menuGroupOf = (project) =>
+  menuGroups.find((group) => project.group === group || project.alsoIn?.includes(group))
+export const menuProjects = menuGroups.map((group) =>
+  allProjects.filter((project) => menuGroupOf(project) === group),
+)
 
 // Design philosophy page (design_philosophy frame). Each paragraph is a list of
 // lines; a line is either a string or a list of { text, highlight } runs.

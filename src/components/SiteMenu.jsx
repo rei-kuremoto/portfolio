@@ -5,7 +5,8 @@ import { routes } from '../hooks/useHashRoute'
 
 const pages = [
   { label: 'top', href: routes.top },
-  { label: 'design philosophy', href: routes.philosophy },
+  // Hidden for now; the /philosophy route still works.
+  // { label: 'design philosophy', href: routes.philosophy },
   { label: 'profile', href: routes.profile },
 ]
 

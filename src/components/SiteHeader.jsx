@@ -9,16 +9,15 @@ import { routes } from '../hooks/useHashRoute'
 export default function SiteHeader({ onOpenMenu, children }) {
   return (
     <header className="border-b border-ink">
-      {/* sp: wordmark and hamburger share one row; the wordmark stays centred
-          (an empty first column balances the hamburger) and shrinks on narrow screens.
-          The hamburger sits right, on the side the menu slides in from. */}
+      {/* sp: hamburger and wordmark share one row; the wordmark stays centred
+          (an empty column balances the hamburger) and shrinks on narrow screens. */}
       <div className="grid h-[78px] grid-cols-[48px_minmax(0,1fr)_48px] items-center px-[15px] md:hidden">
-        <a href={routes.top} aria-label="rei kuremoto. — top" className="col-start-2 flex justify-center">
-          <img src={wordmarkSp} alt="rei kuremoto." width={263} height={31} className="h-auto w-[263px] max-w-full" />
-        </a>
         <button type="button" onClick={onOpenMenu} aria-label="Open menu" className="size-12">
           <img src={hamburger} alt="" className="size-full" />
         </button>
+        <a href={routes.top} aria-label="rei kuremoto. — top" className="flex justify-center">
+          <img src={wordmarkSp} alt="rei kuremoto." width={263} height={31} className="h-auto w-[263px] max-w-full" />
+        </a>
       </div>
 
       {/* pc: large wordmark, "menu" link top-right */}

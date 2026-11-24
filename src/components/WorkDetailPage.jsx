@@ -23,10 +23,13 @@ function Image({ image }) {
 // the images' Figma size.
 function ImageRow({ items, gap }) {
   const maxWidth = items.reduce((sum, item) => sum + naturalWidth(item), 0) + gap * (items.length - 1)
+  // Normalised so the grow factors sum to 1: flex-grow values summing below 1 (a single
+  // portrait image) would only take that fraction of the row.
+  const totalAspect = items.reduce((sum, item) => sum + aspect(item), 0)
   return (
     <div className="flex w-full" style={{ gap, maxWidth }}>
       {items.map((item, index) => (
-        <div key={index} className="flex min-w-0 flex-col" style={{ flex: `${aspect(item)} 1 0%`, gap }}>
+        <div key={index} className="flex min-w-0 flex-col" style={{ flex: `${aspect(item) / totalAspect} 1 0%`, gap }}>
           {Array.isArray(item) ? item.map((image) => <Image key={image.src} image={image} />) : <Image image={item} />}
         </div>
       ))}

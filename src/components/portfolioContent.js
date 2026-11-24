@@ -58,6 +58,10 @@ const legacyImage = (path, width, height) => {
 const version2Image = (name) => legacyImage(`detail/version2/${name}.png`, 925, 618)
 const version3Image = (name, portrait = false) =>
   legacyImage(`detail/version3/${name}.png`, portrait ? 440 : 929, 629)
+// Figma board screenshots, all shown at the same (full column) width under the event photos.
+const PROCESS_WIDTH = 1463
+const versionProcess = (version, number, width, height) =>
+  legacyImage(`detail/${version}/process-${number}.png`, PROCESS_WIDTH, Math.round((height * PROCESS_WIDTH) / width))
 const photo = (name, orientation) =>
   legacyImage(
     `photo-${name}`,
@@ -618,6 +622,18 @@ export const projects = [
           ],
         ],
       },
+      {
+        caption: '制作物の進行管理',
+        rows: [[versionProcess('version3', '01', 2670, 1440)]],
+      },
+      {
+        caption: '会場装飾のリサーチとシミュレーション',
+        rows: [[versionProcess('version3', '02', 1356, 1420)]],
+      },
+      {
+        caption: '会場レイアウトと展示物の配置計画',
+        rows: [[versionProcess('version3', '03', 2926, 1466)]],
+      },
     ],
   },
   {
@@ -647,6 +663,10 @@ export const projects = [
           [version2Image('03-writing'), version2Image('04-stickers')],
           [version2Image('05-tshirt-white'), version2Image('06-shirts-folded')],
         ],
+      },
+      {
+        caption: 'フォトパネル展示のレイアウト検討',
+        rows: [[versionProcess('version2', '01', 1618, 1264)]],
       },
     ],
   },
